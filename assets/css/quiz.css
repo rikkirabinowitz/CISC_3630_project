@@ -1,0 +1,118 @@
+	#banner {
+		background-color: #444;
+		color: #ffffff;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		padding: 4em 0 2em 0 ;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/quiz.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: calc(100vh - 3.125em);
+		min-height: 30em;
+		text-align: center;
+	}
+
+
+#quiz{
+    height:90vh;
+    padding: 1em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#quiz button:disabled {
+  opacity: 0.5;
+  cursor: default;
+    padding: 1em;
+    border: 1px solid rgba(244,244,244,.3);
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+#quiz button {
+ 
+  cursor: default;
+    padding: 1em;
+    border: 1px solid rgba(244,244,244,.3);
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-right: 5%;
+    text-transform: uppercase;
+}
+
+
+#question input[type=radio] {
+  display: none;
+}
+
+#question label {
+  display: inline-block;
+  padding: 1em;
+  border: 2px solid rgba(255,255,255,.3);
+  margin-left: 5%;
+    width: 40%;
+  cursor: pointer;
+    border-radius: 5px;
+    font-size: .8em;
+}
+
+#question label:hover {
+  background: #86d0da;
+}
+
+#question input[type=radio]:checked + label {
+  color: gray;
+      background: #86d0da;
+
+}
+
+#quiz-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: white;
+  width: 100%;
+  height: calc(100% - 44px);
+}
+
+#quiz-results-message {
+  display: block;
+  color: #1c1d26;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#quiz-results-score {
+  display: block;
+  color: #31706c;
+  font-size: 20px;
+}
+
+#quiz-results-score b {
+  color: #1c1d26;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h1{
+    padding-bottom: 1em;
+}

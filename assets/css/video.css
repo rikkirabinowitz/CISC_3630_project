@@ -1,0 +1,29 @@
+	#banner {
+		background-color: #444;
+		color: #ffffff;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		padding: 4em 0 2em 0 ;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/video2.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: calc(100vh - 3.125em);
+		min-height: 30em;
+		text-align: center;
+	}
+

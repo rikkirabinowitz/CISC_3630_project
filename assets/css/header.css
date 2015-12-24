@@ -1,0 +1,765 @@
+header h1{
+    color: gray;
+}
+
+	section.special, article.special, header.special {
+		text-align: center;
+	}
+
+	header p {
+		position: relative;
+		margin: 0 0 1.5em 0;
+	}
+
+	header h2 + p {
+		font-size: 1.25em;
+		margin-top: -1em;
+		line-height: 1.5em;
+	}
+
+	header h3 + p {
+		font-size: 1.1em;
+		margin-top: -0.8em;
+		line-height: 1.5em;
+	}
+
+	header h4 + p,
+	header h5 + p,
+	header h6 + p {
+		font-size: 0.9em;
+		margin-top: -0.6em;
+		line-height: 1.5em;
+	}
+
+	header p {
+		color: #bbb;
+	}
+
+
+/* Header */
+
+	body {
+		padding-top: 3.125em;
+	}
+
+	#header {
+		background: #fff;
+		border-bottom: solid 1px rgba(144, 144, 144, 0.3);
+		color: #555;
+		height: 3.25em;
+		left: 0;
+		line-height: 3.25em;
+		position: fixed;
+		text-align: right;
+		text-transform: uppercase;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+	}
+
+		#header > h1 {
+			display: inline-block;
+			font-weight: 300;
+			height: inherit;
+			left: 1.25em;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+		}
+
+			#header > h1 a {
+				font-weight: 700;
+			}
+
+			#header > h1 span {
+				font-weight: 300;
+			}
+
+		#header > a {
+			-moz-transition: color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out;
+			display: inline-block;
+			padding: 0 0.75em;
+			color: inherit;
+			text-decoration: none;
+		}
+
+			#header > a:hover {
+				color: #444;
+			}
+
+			#header > a[href="#menu"] {
+				text-decoration: none;
+				font-weight: 700;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+				#header > a[href="#menu"]:before {
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+
+				#header > a[href="#menu"]:before {
+					content: '\f0c9';
+					color: rgba(144, 144, 144, 0.6);
+					margin: 0 0.5em 0 0;
+				}
+
+			#header > a + a[href="#menu"]:last-child {
+				border-left: solid 1px rgba(144, 144, 144, 0.3);
+				padding-left: 1.25em;
+				margin-left: 0.5em;
+			}
+
+			#header > a:last-child {
+				padding-right: 1.25em;
+			}
+
+			@media screen and (max-width: 736px) {
+
+				#header > a {
+					padding: 0 0.5em;
+				}
+
+					#header > a + a[href="#menu"]:last-child {
+						padding-left: 1em;
+						margin-left: 0.25em;
+					}
+
+					#header > a:last-child {
+						padding-right: 1em;
+					}
+
+			}
+
+	@media screen and (max-width: 980px) {
+
+		body {
+			padding-top: 44px;
+		}
+
+		#header {
+			height: 44px;
+			line-height: 44px;
+		}
+
+			#header > h1 {
+				left: 1em;
+			}
+
+				#header > h1 a {
+					font-size: 1em;
+				}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#header {
+			min-width: 320px;
+		}
+
+			#header > h1 span {
+				display: none;
+			}
+
+	}
+
+	/*
+		Tactile by Pixelarity
+		pixelarity.com @pixelarity
+		License: pixelarity.com/license
+	*/
+
+/* Menu */
+
+	#menu {
+		background-color: #545669;
+		color: #e5e5e8;
+		-moz-transform: translateX(20em);
+		-webkit-transform: translateX(20em);
+		-ms-transform: translateX(20em);
+		transform: translateX(20em);
+		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		-webkit-overflow-scrolling: touch;
+		box-shadow: none;
+		height: 100%;
+		max-width: 80%;
+		overflow-y: auto;
+		padding: 3em 2em;
+		position: fixed;
+		right: 0;
+		text-transform: uppercase;
+		top: 0;
+		visibility: hidden;
+		width: 20em;
+		z-index: 10002;
+	}
+
+		#menu input, #menu select, #menu textarea {
+			color: #ffffff;
+		}
+
+		#menu a {
+			color: #72c9d4;
+		}
+
+		#menu strong, #menu b {
+			color: #ffffff;
+		}
+
+		#menu h1, #menu h2, #menu h3, #menu h4, #menu h5, #menu h6 {
+			color: #ffffff;
+		}
+
+			#menu h1.major:after, #menu h2.major:after, #menu h3.major:after, #menu h4.major:after, #menu h5.major:after, #menu h6.major:after {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+
+		#menu blockquote {
+			border-left-color: rgba(0, 0, 0, 0.3);
+		}
+
+		#menu code {
+			background: rgba(0, 0, 0, 0.1);
+			border-color: rgba(0, 0, 0, 0.3);
+		}
+
+		#menu hr {
+			border-bottom-color: rgba(0, 0, 0, 0.3);
+		}
+
+		#menu input[type="submit"],
+		#menu input[type="reset"],
+		#menu input[type="button"],
+		#menu button,
+		#menu .button {
+			background-color: transparent;
+			border-color: rgba(0, 0, 0, 0.3);
+			color: #ffffff !important;
+		}
+
+			#menu input[type="submit"]:hover,
+			#menu input[type="reset"]:hover,
+			#menu input[type="button"]:hover,
+			#menu button:hover,
+			#menu .button:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			#menu input[type="submit"]:active,
+			#menu input[type="reset"]:active,
+			#menu input[type="button"]:active,
+			#menu button:active,
+			#menu .button:active {
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+
+			#menu input[type="submit"].icon:before,
+			#menu input[type="reset"].icon:before,
+			#menu input[type="button"].icon:before,
+			#menu button.icon:before,
+			#menu .button.icon:before {
+				color: #ffffff;
+			}
+
+			#menu input[type="submit"].special,
+			#menu input[type="reset"].special,
+			#menu input[type="button"].special,
+			#menu button.special,
+			#menu .button.special {
+				border: none;
+				background-color: #72c9d4;
+				color: #ffffff !important;
+			}
+
+				#menu input[type="submit"].special:hover,
+				#menu input[type="reset"].special:hover,
+				#menu input[type="button"].special:hover,
+				#menu button.special:hover,
+				#menu .button.special:hover {
+					background-color: #86d0da;
+				}
+
+				#menu input[type="submit"].special:active,
+				#menu input[type="reset"].special:active,
+				#menu input[type="button"].special:active,
+				#menu button.special:active,
+				#menu .button.special:active {
+					background-color: #5ec2ce;
+				}
+
+				#menu input[type="submit"].special.icon:before,
+				#menu input[type="reset"].special.icon:before,
+				#menu input[type="button"].special.icon:before,
+				#menu button.special.icon:before,
+				#menu .button.special.icon:before {
+					color: #ffffff;
+				}
+
+		#menu > ul {
+			margin: 0 0 1em 0;
+		}
+
+			#menu > ul.links {
+				list-style: none;
+				padding: 0;
+			}
+
+				#menu > ul.links > li {
+					padding: 0;
+				}
+
+					#menu > ul.links > li > a:not(.button) {
+						border-top: solid 1px rgba(0, 0, 0, 0.3);
+						color: inherit;
+						display: block;
+						line-height: 3.5em;
+						text-decoration: none;
+					}
+
+					#menu > ul.links > li > .button {
+						display: block;
+						margin: 0.5em 0 0 0;
+					}
+
+					#menu > ul.links > li:first-child > a:not(.button) {
+						border-top: 0 !important;
+					}
+
+		#menu .close {
+			text-decoration: none;
+			-moz-transition: color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out;
+			-webkit-tap-highlight-color: transparent;
+			border: 0;
+			color: #babbc3;
+			cursor: pointer;
+			display: block;
+			height: 3.25em;
+			line-height: 3.25em;
+			padding-right: 1.25em;
+			position: absolute;
+			right: 0;
+			text-align: right;
+			top: 0;
+			vertical-align: middle;
+			width: 7em;
+		}
+
+			#menu .close:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
+
+			#menu .close:before {
+				content: '\f00d';
+				font-size: 1.25em;
+			}
+
+			#menu .close:hover {
+				color: #ffffff;
+			}
+
+			@media screen and (max-width: 736px) {
+
+				#menu .close {
+					height: 4em;
+					line-height: 4em;
+				}
+
+			}
+
+		#menu.visible {
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+			box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
+			visibility: visible;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#menu {
+				padding: 2.5em 1.75em;
+			}
+
+}
+	#banner {
+		background-color: #444;
+		color: #ffffff;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		padding: 1em 0 2em 0 ;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/banner3.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100vh;
+		text-align: center;
+	}
+
+		#banner input, #banner select, #banner textarea {
+			color: #ffffff;
+		}
+
+		#banner a {
+			color: #72c9d4;
+		}
+
+		#banner strong, #banner b {
+			color: #ffffff;
+		}
+
+		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
+			color: #ffffff;
+		}
+
+			#banner h1.major:after, #banner h2.major:after, #banner h3.major:after, #banner h4.major:after, #banner h5.major:after, #banner h6.major:after {
+				background-color: #ffffff;
+			}
+
+		#banner blockquote {
+			border-left-color: #fff;
+		}
+
+		#banner code {
+			background: rgba(255, 255, 255, 0.1);
+			border-color: #fff;
+		}
+
+		#banner hr {
+			border-bottom-color: #fff;
+		}
+
+		#banner input[type="submit"],
+		#banner input[type="reset"],
+		#banner input[type="button"],
+		#banner button,
+		#banner .button {
+			background-color: transparent;
+			border-color: #fff;
+			color: #ffffff !important;
+		}
+
+			#banner input[type="submit"]:hover,
+			#banner input[type="reset"]:hover,
+			#banner input[type="button"]:hover,
+			#banner button:hover,
+			#banner .button:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+
+			#banner input[type="submit"]:active,
+			#banner input[type="reset"]:active,
+			#banner input[type="button"]:active,
+			#banner button:active,
+			#banner .button:active {
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+
+			#banner input[type="submit"].icon:before,
+			#banner input[type="reset"].icon:before,
+			#banner input[type="button"].icon:before,
+			#banner button.icon:before,
+			#banner .button.icon:before {
+				color: #ffffff;
+			}
+
+			#banner input[type="submit"].special,
+			#banner input[type="reset"].special,
+			#banner input[type="button"].special,
+			#banner button.special,
+			#banner .button.special {
+				border: none;
+				background-color: #72c9d4;
+				color: #ffffff !important;
+			}
+
+				#banner input[type="submit"].special:hover,
+				#banner input[type="reset"].special:hover,
+				#banner input[type="button"].special:hover,
+				#banner button.special:hover,
+				#banner .button.special:hover {
+					background-color: #86d0da;
+				}
+
+				#banner input[type="submit"].special:active,
+				#banner input[type="reset"].special:active,
+				#banner input[type="button"].special:active,
+				#banner button.special:active,
+				#banner .button.special:active {
+					background-color: #5ec2ce;
+				}
+
+				#banner input[type="submit"].special.icon:before,
+				#banner input[type="reset"].special.icon:before,
+				#banner input[type="button"].special.icon:before,
+				#banner button.special.icon:before,
+				#banner .button.special.icon:before {
+					color: #ffffff;
+				}
+
+		#banner > .inner {
+			position: relative;
+			display: inline-block;
+			max-width: 100%;
+			padding: 0 2em;
+			z-index: 1;
+		}
+
+			#banner > .inner > * {
+				-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease, -moz-filter 0.25s ease;
+				-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease, -webkit-filter 0.25s ease;
+				-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease, -ms-filter 0.25s ease;
+				transition: transform 0.75s ease, opacity 0.75s ease, filter 0.25s ease;
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				-moz-filter: blur(0);
+				-webkit-filter: blur(0);
+				-ms-filter: blur(0);
+				filter: blur(0);
+				opacity: 1;
+			}
+
+			#banner > .inner > :nth-child(1) {
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-ms-transition-delay: 0s;
+				transition-delay: 0s;
+			}
+
+			#banner > .inner > :nth-child(2) {
+				-moz-transition-delay: 0.2s;
+				-webkit-transition-delay: 0.2s;
+				-ms-transition-delay: 0.2s;
+				transition-delay: 0.2s;
+			}
+
+			#banner > .inner > :nth-child(3) {
+				-moz-transition-delay: 0.4s;
+				-webkit-transition-delay: 0.4s;
+				-ms-transition-delay: 0.4s;
+				transition-delay: 0.4s;
+			}
+
+			#banner > .inner > :nth-child(4) {
+				-moz-transition-delay: 0.6s;
+				-webkit-transition-delay: 0.6s;
+				-ms-transition-delay: 0.6s;
+				transition-delay: 0.6s;
+			}
+
+			#banner > .inner > :nth-child(5) {
+				-moz-transition-delay: 0.8s;
+				-webkit-transition-delay: 0.8s;
+				-ms-transition-delay: 0.8s;
+				transition-delay: 0.8s;
+			}
+
+		#banner h2 {
+			font-size: 2em;
+            border-bottom: 1px solid rgba(255,255,255,.4);
+		}
+
+		#banner p {
+			font-size: 1.25em;
+			margin-bottom: 1.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:rgba(255,255,255,.85);
+		}
+
+		#banner .button {
+			min-width: 15em;
+		}
+
+		#banner:after {
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
+			content: '';
+			display: block;
+			background: #444;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+
+		body.is-loading #banner > .inner > * {
+			-moz-transform: translateY(0.35em);
+			-webkit-transform: translateY(0.35em);
+			-ms-transform: translateY(0.35em);
+			transform: translateY(0.35em);
+			-moz-filter: blur(1px);
+			-webkit-filter: blur(1px);
+			-ms-filter: blur(1px);
+			filter: blur(1px);
+			opacity: 0;
+		}
+
+		body.is-loading #banner:after {
+			opacity: 1;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#banner {
+				background-attachment: scroll;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#banner {
+				height: calc(100vh - 44px);
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#banner h2 {
+				font-size: 1.5em;
+			}
+
+			#banner p {
+				font-size: 1.1em;
+			}
+
+		}
+
+
+	#main > header {
+		background-color: #444;
+		color: #ffffff;
+		padding: 10em 0 8em 0 ;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/banner.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: relative;
+		text-align: center;
+	}
+
+		#main > header input, #main > header select, #main > header textarea {
+			color: #ffffff;
+		}
+
+		#main > header a {
+			color: #72c9d4;
+		}
+
+		#main > header strong, #main > header b {
+			color: #ffffff;
+		}
+
+		#main > header h1, #main > header h2, #main > header h3, #main > header h4, #main > header h5, #main > header h6 {
+			color: #ffffff;
+		}
+
+			#main > header h1.major:after, #main > header h2.major:after, #main > header h3.major:after, #main > header h4.major:after, #main > header h5.major:after, #main > header h6.major:after {
+				background-color: #ffffff;
+			}
+
+		#main > header blockquote {
+			border-left-color: #fff;
+		}
+
+		#main > header code {
+			background: rgba(255, 255, 255, 0.1);
+			border-color: #fff;
+		}
+
+		#main > header hr {
+			border-bottom-color: #fff;
+		}
+
+		#main > header h2 {
+			font-size: 2em;
+		}
+
+		#main > header p {
+			color: inherit;
+			letter-spacing: 0.07em;
+			margin-top: 0;
+		}
+
+		@media screen and (max-width: 1680px) {
+
+			#main > header {
+				padding: 8em 0 6em 0 ;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#main > header {
+				padding: 8em 3em 6em 3em ;
+				background-attachment: scroll;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#main > header {
+				padding: 10em 3em 8em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#main > header {
+				padding: 4.5em 3em 2.5em 3em ;
+			}
+
+				#main > header h2 {
+					font-size: 1.5em;
+					margin: 0 0 1em 0;
+				}
+
+		}
